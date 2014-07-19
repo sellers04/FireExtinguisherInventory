@@ -13,6 +13,9 @@
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
+        
+        NSLog(@"Got to main");
+        
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([FXIAppDelegate class]));
     }
 }
