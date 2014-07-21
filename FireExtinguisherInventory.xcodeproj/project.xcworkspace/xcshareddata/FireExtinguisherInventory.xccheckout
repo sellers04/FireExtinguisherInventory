@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FF06FDF7-BE88-4A84-91D6-2347F2666265</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FireExtinguisherInventory</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E1489EEB-C21D-4AA0-A2A1-1CAABECDE3B9</key>
+		<string>https://github.com/sellers04/FireExtinguisherInventory.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FireExtinguisherInventory.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E1489EEB-C21D-4AA0-A2A1-1CAABECDE3B9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sellers04/FireExtinguisherInventory.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E1489EEB-C21D-4AA0-A2A1-1CAABECDE3B9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E1489EEB-C21D-4AA0-A2A1-1CAABECDE3B9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FireExtinguisherInventory</string>
+		</dict>
+	</array>
+</dict>
+</plist>
