@@ -29,6 +29,7 @@
 		45AAF8CD1979CD9A007BCBB3 /* FXIAddServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AAF8CC1979CD9A007BCBB3 /* FXIAddServiceViewController.m */; };
 		45AAF8D61979D039007BCBB3 /* FXIActionPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AAF8D51979D039007BCBB3 /* FXIActionPickerView.m */; };
 		7C2E6C83197D7823005F1078 /* FXIServiceHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E6C82197D7823005F1078 /* FXIServiceHistoryTableViewController.m */; };
+		7C97C3C5197D8A4E00949B16 /* FXIViewServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C97C3C4197D8A4E00949B16 /* FXIViewServiceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		45AAF8D51979D039007BCBB3 /* FXIActionPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXIActionPickerView.m; path = FireExtinguisherInventory/Model/FXIActionPickerView.m; sourceTree = "<group>"; };
 		7C2E6C81197D7823005F1078 /* FXIServiceHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXIServiceHistoryTableViewController.h; path = ../FXIServiceHistoryTableViewController.h; sourceTree = "<group>"; };
 		7C2E6C82197D7823005F1078 /* FXIServiceHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXIServiceHistoryTableViewController.m; path = ../FXIServiceHistoryTableViewController.m; sourceTree = "<group>"; };
+		7C97C3C3197D8A4E00949B16 /* FXIViewServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXIViewServiceViewController.h; sourceTree = "<group>"; };
+		7C97C3C4197D8A4E00949B16 /* FXIViewServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXIViewServiceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				45AAF8C81979B7C0007BCBB3 /* FXIExtinguisherViewController.h */,
 				45AAF8C91979B7C0007BCBB3 /* FXIExtinguisherViewController.m */,
 				45AAF8C019798A4F007BCBB3 /* Main_iPhone.storyboard */,
+				7C97C3C3197D8A4E00949B16 /* FXIViewServiceViewController.h */,
+				7C97C3C4197D8A4E00949B16 /* FXIViewServiceViewController.m */,
 				45AAF8CB1979CD9A007BCBB3 /* FXIAddServiceViewController.h */,
 				45AAF8CC1979CD9A007BCBB3 /* FXIAddServiceViewController.m */,
 				7C2E6C81197D7823005F1078 /* FXIServiceHistoryTableViewController.h */,
@@ -305,6 +310,7 @@
 				45AAF89119797F83007BCBB3 /* main.m in Sources */,
 				45AAF8B919798472007BCBB3 /* FXIServiceEvent.m in Sources */,
 				45AAF8B51979814F007BCBB3 /* FXIFireExtinguisher.m in Sources */,
+				7C97C3C5197D8A4E00949B16 /* FXIViewServiceViewController.m in Sources */,
 				7C2E6C83197D7823005F1078 /* FXIServiceHistoryTableViewController.m in Sources */,
 				45AAF8BC197986C2007BCBB3 /* FXILocation.m in Sources */,
 				45AAF8C719798B21007BCBB3 /* FXIOverviewTableViewController.m in Sources */,

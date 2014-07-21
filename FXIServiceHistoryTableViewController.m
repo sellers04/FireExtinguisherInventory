@@ -7,6 +7,7 @@
 //
 
 #import "FXIServiceHistoryTableViewController.h"
+#import "FXIViewServiceViewController.h"
 
 @interface FXIServiceHistoryTableViewController ()
 
@@ -110,7 +111,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -118,7 +119,22 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    FXIViewServiceViewController *vc = [segue destinationViewController];
+    NSIndexPath *index = [self.tableView indexPathForSelectedRow];
+    long row = [index row];
+    vc.displayEvent = self.fireExt.serviceEvents[row];
+    
 }
-*/
+
+
+- (IBAction)unwindToServiceHistoryTableView:(UIStoryboardSegue *)segue
+{
+    NSLog(@"segue: %@", segue.identifier);
+    
+}
+
+
+
 
 @end

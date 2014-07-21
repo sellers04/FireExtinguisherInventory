@@ -171,30 +171,21 @@
                                 </connections>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter servicing notes here" translatesAutoresizingMaskIntoConstraints="NO" id="cIx-y0-Za2">
-                                <rect key="frame" x="20" y="320" width="280" height="129"/>
+                                <rect key="frame" x="20" y="320" width="280" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzP-jH-SZ7">
-                                <rect key="frame" x="199" y="457" width="101" height="58"/>
+                                <rect key="frame" x="110" y="457" width="101" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Confirm">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="8vn-aX-zCv" kind="unwind" unwindAction="unwindToExtinguisherView:" id="4Aq-N3-WXV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRQ-dR-GrA">
-                                <rect key="frame" x="20" y="457" width="101" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8vn-aX-zCv" kind="unwind" unwindAction="unwindToExtinguisherView:" id="9GN-Hw-xus"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -203,7 +194,6 @@
                     <navigationItem key="navigationItem" title="Add New Service Entry" id="1Pf-5N-5YG"/>
                     <connections>
                         <outlet property="actionPicker" destination="vwg-Db-Otv" id="tZC-27-qsf"/>
-                        <outlet property="cancelButton" destination="iRQ-dR-GrA" id="aQ5-q6-TZk"/>
                         <outlet property="confirmButton" destination="YzP-jH-SZ7" id="bY4-9C-6Op"/>
                         <outlet property="inspectorNameBox" destination="EFD-Fb-ZT9" id="IAd-s2-CEr"/>
                         <outlet property="serviceNotes" destination="cIx-y0-Za2" id="4KP-ot-Pdh"/>
@@ -214,7 +204,7 @@
             </objects>
             <point key="canvasLocation" x="-1190" y="-274"/>
         </scene>
-        <!--Service History Table View Controller-->
+        <!--Service History Table View Controller - Service History-->
         <scene sceneID="091-xg-moy">
             <objects>
                 <tableViewController id="xbW-dU-QJ8" customClass="FXIServiceHistoryTableViewController" sceneMemberID="viewController">
@@ -256,16 +246,16 @@
                             <outlet property="delegate" destination="xbW-dU-QJ8" id="qsX-FA-ROV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1vH-Wk-Gia"/>
+                    <navigationItem key="navigationItem" title="Service History" id="1vH-Wk-Gia"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xg-QE-bLv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1178" y="467"/>
+            <point key="canvasLocation" x="-1190" y="467"/>
         </scene>
-        <!--View Controller-->
+        <!--View Service View Controller - Service Event-->
         <scene sceneID="yVj-WY-Joe">
             <objects>
-                <viewController id="t4h-BL-bf1" sceneMemberID="viewController">
+                <viewController id="t4h-BL-bf1" customClass="FXIViewServiceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SlR-y0-goM"/>
                         <viewControllerLayoutGuide type="bottom" id="Acp-1r-AlM"/>
@@ -273,13 +263,47 @@
                     <view key="view" contentMode="scaleToFill" id="UQe-iC-c7B">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serviced by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIG-ec-LIz">
+                                <rect key="frame" x="20" y="115" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LX-rr-vid">
+                                <rect key="frame" x="20" y="170" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Action:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43Q-gN-si9">
+                                <rect key="frame" x="20" y="231" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUf-gN-Dij">
+                                <rect key="frame" x="20" y="298" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uga-gT-jyo"/>
+                    <navigationItem key="navigationItem" title="Service Event" id="uga-gT-jyo"/>
+                    <connections>
+                        <outlet property="actionLabel" destination="43Q-gN-si9" id="EiB-EB-XJ0"/>
+                        <outlet property="dateLabel" destination="1LX-rr-vid" id="33f-FJ-82w"/>
+                        <outlet property="nameLabel" destination="eIG-ec-LIz" id="GXa-yL-mJ1"/>
+                        <outlet property="notesLabel" destination="VUf-gN-Dij" id="2oe-cv-kUC"/>
+                        <outlet property="topLabel" destination="uga-gT-jyo" id="jOW-bA-C0O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOu-XO-Mev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-498" y="429"/>
+            <point key="canvasLocation" x="-616" y="467"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -74,6 +74,8 @@
     self.actionPicker.delegate = self;
     self.inspectorNameBox.delegate = self;
     self.serviceNotes.delegate = self;
+    self.serviceNotes.layer.borderWidth = 2.0f;
+    self.serviceNotes.layer.borderColor = [[UIColor grayColor] CGColor];
     
    // [self.inspectorNameBox setDelegate:self];
     
