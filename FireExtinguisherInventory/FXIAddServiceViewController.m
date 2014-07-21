@@ -29,7 +29,6 @@
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
 {
-    
     return _serviceActions.count;
    // return 2;
 }
@@ -37,9 +36,7 @@
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component
 {
-   // NSLog(@"print: %@", [self.serviceActions objectAtIndex:row]);
     FXIServiceAction *printAction = _serviceActions[row];
-  //  NSLog(@"print name: %@", printAction.name);
     return printAction.name;
 }
 
@@ -48,7 +45,6 @@
 {
     
 }
-
 
 
 
@@ -65,10 +61,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-   // _serviceActions = @[@"Option 1", @"Option 2", @"Option 3"];
-    
-    
+
     [self createServiceActions];
     self.actionPicker.dataSource = self;
     self.actionPicker.delegate = self;
@@ -76,9 +69,6 @@
     self.serviceNotes.delegate = self;
     self.serviceNotes.layer.borderWidth = 2.0f;
     self.serviceNotes.layer.borderColor = [[UIColor grayColor] CGColor];
-    
-   // [self.inspectorNameBox setDelegate:self];
-    
     
 }
 
@@ -111,10 +101,6 @@
     newAction3.description = @"maximum fixing";
     
     _serviceActions = @[newAction1, newAction2, newAction3];
-
-    
-   //[_serviceActions addObjectsFromArray:@[newAction1, newAction2, newAction3]];
-
 }
 
 
@@ -133,9 +119,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    //- (void) addNewServiceEvent:(FXIServiceEvent *) service;
-
-    
     if (sender != self.confirmButton) return;
     if (self.inspectorNameBox.text.length > 0)
     {
@@ -151,19 +134,7 @@
         newServiceEvent.note = self.serviceNotes.text;
         
         newServiceEvent.action = _serviceActions[[self.actionPicker selectedRowInComponent:0]];
-        NSLog(@"newserviceevent: %@", newServiceEvent.action.name);
-        
-        //NSLog(@"test!!! %@", _serviceActions[[self.actionPicker selectedRowInComponent:0]]);
-        //NSLog(@"test!!! %@", self.fireExt);
-        
-        
-        
-        
-        
-
-        
-        
-        
+ 
         [self.fireExt addNewServiceEvent:newServiceEvent];
     
     }

@@ -9,17 +9,6 @@
 #import "FXIServiceEvent.h"
 
 @implementation FXIServiceEvent
-/*
-- (NSMutableString *) note
-{
-    if (!_note)
-    {
-        _note = [[NSMutableString alloc] init];
-    
-    }
-    return _note;
-}
-*/
 
 
 @end

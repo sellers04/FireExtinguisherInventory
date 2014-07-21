@@ -35,9 +35,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"This is selectedObject : %@", self.selectedObject);
-    [self loadObjectData];
     // Do any additional setup after loading the view.
+    [self loadObjectData];
 }
 
 - (void)loadObjectData
@@ -47,8 +46,6 @@
     _fireExtLocation.text = [NSString stringWithFormat:@"Location: %@ %@ %@ %@", self.selectedObject.location.building, self.selectedObject.location.floor, self.selectedObject.location.section, self.selectedObject.location.room];
     FXIServiceEvent *event = [self.selectedObject.serviceEvents objectAtIndex:0];
     _fireExtLastService.text = event.date;
-
-    
 
 }
 

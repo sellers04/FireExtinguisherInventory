@@ -44,12 +44,8 @@
 {
     [super viewDidLoad];
     
-    NSLog(@"Got here");
-    
     [self loadInitialData];
-    
-    NSLog(@"This is the array: %@", self.fireExtItems);
-    
+  
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -75,7 +71,6 @@
         
         newItem.serviceEvents = [self getServiceEvents];
         
-       // newItem.note = [[NSMutableString alloc] init];
         [newItem.note setString:@"I am an extinguisher"];
         
         newItem.model = @"FireTech9000";
@@ -86,8 +81,6 @@
         newItem.size = @"20 lb";
         newItem.rating = @"ABC";
         newItem.type = @"Water Mist";
-        
-        NSLog(@"New item is %@", newItem);
         
         [self.fireExtItems addObject:newItem];
         
@@ -111,8 +104,6 @@
         NSString *date = [format stringFromDate:curr];
         newService.date = date;
         
-        //newService.note = [[NSMutableString alloc] init];
-       // [newService.note setString:@"Fixed it yey"];
         newService.note = @"Fixed it yey";
         
         FXIServiceAction *newAction = [[FXIServiceAction alloc] init];
@@ -123,7 +114,6 @@
         
         [serviceArray addObject:newService];
     }
-    
     
     return serviceArray;
 }
@@ -139,14 +129,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-//#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [self.fireExtItems count];
 }
@@ -171,16 +159,9 @@
 {
     
     FXIExtinguisherViewController *vc = [segue destinationViewController];
-    //vc.selectedObject = sender
-    NSLog(@"This is vc : %@", vc);
-    NSLog(@"This is sender : %@", sender);
     NSIndexPath *index = [self.tableView indexPathForSelectedRow];
     long row = [index row];
-    //NSLog(@"This is self.fireExtItems[row] : %@", self.fireExtItems[row]);
-    vc.selectedObject = self.fireExtItems[row];
-
-    
-    
+    vc.selectedObject = self.fireExtItems[row]; 
 }
 
 
