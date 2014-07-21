@@ -8,6 +8,7 @@
 
 #import "FXIExtinguisherViewController.h"
 #import "FXIAddServiceViewController.h"
+#import "FXIServiceHistoryTableViewController.h"
 
 @interface FXIExtinguisherViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *fireExtName;
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *fireExtLocation;
 @property (weak, nonatomic) IBOutlet UILabel *fireExtLastService;
 @property (weak, nonatomic) IBOutlet UIButton *addServiceButton;
+@property (weak, nonatomic) IBOutlet UIButton *serviceHistoryButton;
 
 @end
 
@@ -67,8 +69,13 @@
     // Pass the selected object to the new view controller.
     if (sender == self.addServiceButton)
     {
-        FXIAddServiceViewController *vc = [segue destinationViewController];
-        vc.fireExt = self.selectedObject;
+        FXIAddServiceViewController *vcAdd = [segue destinationViewController];
+        vcAdd.fireExt = self.selectedObject;
+    }
+    else if (sender == self.serviceHistoryButton)
+    {
+        FXIServiceHistoryTableViewController *vcView = [segue destinationViewController];
+        vcView.fireExt = self.selectedObject;
     }
 }
 

@@ -33,4 +33,12 @@
     return _inspectionInterval;
 }
 
+- (void) addNewServiceEvent:(FXIServiceEvent *) service
+{
+    [self.serviceEvents addObject:service];
+
+
+}
+
+
 @end

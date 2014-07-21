@@ -29,6 +29,7 @@
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
 {
+    
     return _serviceActions.count;
    // return 2;
 }
@@ -37,7 +38,9 @@
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component
 {
    // NSLog(@"print: %@", [self.serviceActions objectAtIndex:row]);
-    return _serviceActions[row];
+    FXIServiceAction *printAction = _serviceActions[row];
+  //  NSLog(@"print name: %@", printAction.name);
+    return printAction.name;
 }
 
 
@@ -70,6 +73,8 @@
     self.actionPicker.dataSource = self;
     self.actionPicker.delegate = self;
     self.inspectorNameBox.delegate = self;
+    self.serviceNotes.delegate = self;
+    
    // [self.inspectorNameBox setDelegate:self];
     
     
@@ -78,6 +83,13 @@
 - (BOOL) textFieldShouldReturn: (UITextField *) textField
 {
     [self.inspectorNameBox resignFirstResponder];
+    return YES;
+}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if([text isEqualToString:@"\n"])
+        [textView resignFirstResponder];
     return YES;
 }
 
@@ -96,10 +108,10 @@
     newAction3.name = @"Replaced";
     newAction3.description = @"maximum fixing";
     
-    _serviceActions = @[newAction1.name, newAction2.name, newAction3.name];
+    _serviceActions = @[newAction1, newAction2, newAction3];
 
     
-   // [self.serviceActions addObject:newAction];
+   //[_serviceActions addObjectsFromArray:@[newAction1, newAction2, newAction3]];
 
 }
 
@@ -135,10 +147,14 @@
         newServiceEvent.date = date;
         
         newServiceEvent.note = self.serviceNotes.text;
-       // newServiceEvent.action = [self.actionPicker.
         
-        NSLog(@"test!!! %@", _serviceActions[[self.actionPicker selectedRowInComponent:0]]);
-        NSLog(@"test!!! %@", self.fireExt);
+        newServiceEvent.action = _serviceActions[[self.actionPicker selectedRowInComponent:0]];
+        NSLog(@"newserviceevent: %@", newServiceEvent.action.name);
+        
+        //NSLog(@"test!!! %@", _serviceActions[[self.actionPicker selectedRowInComponent:0]]);
+        //NSLog(@"test!!! %@", self.fireExt);
+        
+        
         
         
         
@@ -146,7 +162,7 @@
         
         
         
-        //[self.fireExt addNewServiceEvent:newServiceEvent];
+        [self.fireExt addNewServiceEvent:newServiceEvent];
     
     }
     
